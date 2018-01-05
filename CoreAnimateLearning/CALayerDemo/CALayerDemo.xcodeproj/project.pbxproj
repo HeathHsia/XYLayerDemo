@@ -26,6 +26,10 @@
 		14979E981FFE049900D90025 /* SixViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14979E961FFE049900D90025 /* SixViewController.m */; };
 		14979E991FFE049900D90025 /* SixViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14979E971FFE049900D90025 /* SixViewController.xib */; };
 		14979E9C1FFE1C5100D90025 /* SevenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14979E9B1FFE1C5100D90025 /* SevenViewController.m */; };
+		14979E9E1FFF13E200D90025 /* air.png in Resources */ = {isa = PBXBuildFile; fileRef = 14979E9D1FFF13E200D90025 /* air.png */; };
+		14979EA11FFF61AD00D90025 /* EightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14979EA01FFF61AD00D90025 /* EightViewController.m */; };
+		14979EAA1FFF8DA900D90025 /* NineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14979EA81FFF8DA900D90025 /* NineViewController.m */; };
+		14979EAB1FFF8DA900D90025 /* NineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14979EA91FFF8DA900D90025 /* NineViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +84,12 @@
 		14979E971FFE049900D90025 /* SixViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SixViewController.xib; sourceTree = "<group>"; };
 		14979E9A1FFE1C5100D90025 /* SevenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SevenViewController.h; sourceTree = "<group>"; };
 		14979E9B1FFE1C5100D90025 /* SevenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SevenViewController.m; sourceTree = "<group>"; };
+		14979E9D1FFF13E200D90025 /* air.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = air.png; sourceTree = "<group>"; };
+		14979E9F1FFF61AD00D90025 /* EightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EightViewController.h; sourceTree = "<group>"; };
+		14979EA01FFF61AD00D90025 /* EightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EightViewController.m; sourceTree = "<group>"; };
+		14979EA71FFF8DA900D90025 /* NineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NineViewController.h; sourceTree = "<group>"; };
+		14979EA81FFF8DA900D90025 /* NineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NineViewController.m; sourceTree = "<group>"; };
+		14979EA91FFF8DA900D90025 /* NineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NineViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				14979E7F1FF4C84E00D90025 /* heathledger.png */,
+				14979E9D1FFF13E200D90025 /* air.png */,
 				14979E4D1FF4C5F200D90025 /* AppDelegate.h */,
 				14979E4E1FF4C5F200D90025 /* AppDelegate.m */,
 				14979E501FF4C5F200D90025 /* ViewController.h */,
@@ -152,6 +163,11 @@
 				14979E971FFE049900D90025 /* SixViewController.xib */,
 				14979E9A1FFE1C5100D90025 /* SevenViewController.h */,
 				14979E9B1FFE1C5100D90025 /* SevenViewController.m */,
+				14979E9F1FFF61AD00D90025 /* EightViewController.h */,
+				14979EA01FFF61AD00D90025 /* EightViewController.m */,
+				14979EA71FFF8DA900D90025 /* NineViewController.h */,
+				14979EA81FFF8DA900D90025 /* NineViewController.m */,
+				14979EA91FFF8DA900D90025 /* NineViewController.xib */,
 				14979E911FFDF4A700D90025 /* CustomView.h */,
 				14979E921FFDF4A700D90025 /* CustomView.m */,
 				14979E561FF4C5F200D90025 /* Assets.xcassets */,
@@ -294,9 +310,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14979EAB1FFF8DA900D90025 /* NineViewController.xib in Resources */,
 				14979E5A1FF4C5F200D90025 /* LaunchScreen.storyboard in Resources */,
 				14979E571FF4C5F200D90025 /* Assets.xcassets in Resources */,
 				14979E551FF4C5F200D90025 /* Main.storyboard in Resources */,
+				14979E9E1FFF13E200D90025 /* air.png in Resources */,
 				14979E991FFE049900D90025 /* SixViewController.xib in Resources */,
 				14979E881FFCA7D500D90025 /* ThirdViewController.xib in Resources */,
 				14979E801FF4C84F00D90025 /* heathledger.png in Resources */,
@@ -328,6 +346,8 @@
 				14979E981FFE049900D90025 /* SixViewController.m in Sources */,
 				14979E871FFCA7D500D90025 /* ThirdViewController.m in Sources */,
 				14979E8D1FFCBF5300D90025 /* ForthViewController.m in Sources */,
+				14979EAA1FFF8DA900D90025 /* NineViewController.m in Sources */,
+				14979EA11FFF61AD00D90025 /* EightViewController.m in Sources */,
 				14979E521FF4C5F200D90025 /* ViewController.m in Sources */,
 				14979E5D1FF4C5F200D90025 /* main.m in Sources */,
 				14979E9C1FFE1C5100D90025 /* SevenViewController.m in Sources */,
