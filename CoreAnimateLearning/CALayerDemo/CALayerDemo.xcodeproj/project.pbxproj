@@ -32,6 +32,7 @@
 		14979EAB1FFF8DA900D90025 /* NineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14979EA91FFF8DA900D90025 /* NineViewController.xib */; };
 		14979EAF1FFFA1E200D90025 /* TenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14979EAD1FFFA1E200D90025 /* TenViewController.m */; };
 		14979EB01FFFA1E200D90025 /* TenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14979EAE1FFFA1E200D90025 /* TenViewController.xib */; };
+		14979EB22000626100D90025 /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 14979EB12000626000D90025 /* ball.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		14979EAC1FFFA1E200D90025 /* TenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TenViewController.h; sourceTree = "<group>"; };
 		14979EAD1FFFA1E200D90025 /* TenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TenViewController.m; sourceTree = "<group>"; };
 		14979EAE1FFFA1E200D90025 /* TenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TenViewController.xib; sourceTree = "<group>"; };
+		14979EB12000626000D90025 /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 		14979E4C1FF4C5F200D90025 /* CALayerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				14979EB12000626000D90025 /* ball.png */,
 				14979E7F1FF4C84E00D90025 /* heathledger.png */,
 				14979E9D1FFF13E200D90025 /* air.png */,
 				14979E4D1FF4C5F200D90025 /* AppDelegate.h */,
@@ -324,6 +327,7 @@
 				14979E571FF4C5F200D90025 /* Assets.xcassets in Resources */,
 				14979E551FF4C5F200D90025 /* Main.storyboard in Resources */,
 				14979E9E1FFF13E200D90025 /* air.png in Resources */,
+				14979EB22000626100D90025 /* ball.png in Resources */,
 				14979E991FFE049900D90025 /* SixViewController.xib in Resources */,
 				14979E881FFCA7D500D90025 /* ThirdViewController.xib in Resources */,
 				14979E801FF4C84F00D90025 /* heathledger.png in Resources */,
