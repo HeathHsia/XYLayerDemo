@@ -16,6 +16,7 @@
 #import "SevenViewController.h"
 #import "EightViewController.h"
 #import "NineViewController.h"
+#import "TenViewController.h"
 
 @interface AppDelegate ()<UITabBarControllerDelegate>
 
@@ -26,8 +27,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    NineViewController *nineVC = [[NineViewController alloc] initWithNibName:@"NineViewController" bundle:nil];
-    self.window.rootViewController = nineVC;
+    TenViewController *tenVC = [[TenViewController alloc] initWithNibName:@"TenViewController" bundle:nil];
+    self.window.rootViewController = tenVC;
     
     return YES;
 }

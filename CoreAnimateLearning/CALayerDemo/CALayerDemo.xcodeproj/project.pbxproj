@@ -30,6 +30,8 @@
 		14979EA11FFF61AD00D90025 /* EightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14979EA01FFF61AD00D90025 /* EightViewController.m */; };
 		14979EAA1FFF8DA900D90025 /* NineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14979EA81FFF8DA900D90025 /* NineViewController.m */; };
 		14979EAB1FFF8DA900D90025 /* NineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14979EA91FFF8DA900D90025 /* NineViewController.xib */; };
+		14979EAF1FFFA1E200D90025 /* TenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14979EAD1FFFA1E200D90025 /* TenViewController.m */; };
+		14979EB01FFFA1E200D90025 /* TenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14979EAE1FFFA1E200D90025 /* TenViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,9 @@
 		14979EA71FFF8DA900D90025 /* NineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NineViewController.h; sourceTree = "<group>"; };
 		14979EA81FFF8DA900D90025 /* NineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NineViewController.m; sourceTree = "<group>"; };
 		14979EA91FFF8DA900D90025 /* NineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NineViewController.xib; sourceTree = "<group>"; };
+		14979EAC1FFFA1E200D90025 /* TenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TenViewController.h; sourceTree = "<group>"; };
+		14979EAD1FFFA1E200D90025 /* TenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TenViewController.m; sourceTree = "<group>"; };
+		14979EAE1FFFA1E200D90025 /* TenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TenViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +172,9 @@
 				14979EA01FFF61AD00D90025 /* EightViewController.m */,
 				14979EA71FFF8DA900D90025 /* NineViewController.h */,
 				14979EA81FFF8DA900D90025 /* NineViewController.m */,
+				14979EAC1FFFA1E200D90025 /* TenViewController.h */,
+				14979EAD1FFFA1E200D90025 /* TenViewController.m */,
+				14979EAE1FFFA1E200D90025 /* TenViewController.xib */,
 				14979EA91FFF8DA900D90025 /* NineViewController.xib */,
 				14979E911FFDF4A700D90025 /* CustomView.h */,
 				14979E921FFDF4A700D90025 /* CustomView.m */,
@@ -311,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14979EAB1FFF8DA900D90025 /* NineViewController.xib in Resources */,
+				14979EB01FFFA1E200D90025 /* TenViewController.xib in Resources */,
 				14979E5A1FF4C5F200D90025 /* LaunchScreen.storyboard in Resources */,
 				14979E571FF4C5F200D90025 /* Assets.xcassets in Resources */,
 				14979E551FF4C5F200D90025 /* Main.storyboard in Resources */,
@@ -348,6 +357,7 @@
 				14979E8D1FFCBF5300D90025 /* ForthViewController.m in Sources */,
 				14979EAA1FFF8DA900D90025 /* NineViewController.m in Sources */,
 				14979EA11FFF61AD00D90025 /* EightViewController.m in Sources */,
+				14979EAF1FFFA1E200D90025 /* TenViewController.m in Sources */,
 				14979E521FF4C5F200D90025 /* ViewController.m in Sources */,
 				14979E5D1FF4C5F200D90025 /* main.m in Sources */,
 				14979E9C1FFE1C5100D90025 /* SevenViewController.m in Sources */,
