@@ -7,13 +7,43 @@
 //
 
 #import "TwelveViewController.h"
+#import "DrawView.h"
 
 @interface TwelveViewController ()
+@property (strong, nonatomic) IBOutlet DrawView *drawView;
+
 
 @end
 
 @implementation TwelveViewController
 
+#pragma mark --- 画笔
+- (IBAction)paint:(id)sender {
+    self.drawView.drawStatus = DrawPaint;
+}
+
+#pragma mark --- 橡皮擦
+
+- (IBAction)eraser:(id)sender {
+    self.drawView.drawStatus = DrawEraser;
+}
+
+#pragma mark --- 清除
+- (IBAction)clear:(id)sender {
+    
+    [self.drawView clear];
+
+}
+
+#pragma mark --- 上一步
+- (IBAction)recall:(id)sender {
+    [self.drawView recall];
+}
+
+#pragma mark --- 下一步
+- (IBAction)nextStep:(id)sender {
+    [self.drawView nextStep];
+}
 - (void)viewDidLoad {
     
     // 性能优化 CPU GPU
@@ -44,8 +74,19 @@
     // CPU的操作, 软件层次上的计算, 他虽然不会影响帧率, 但是会延迟动画的开始时间, 视觉上会感觉比较迟钝
     // 1. 布局计算 (视图层级过于复杂, 视图的呈现, 修改 布局的刷新)
     // 2. 视图懒加载 (显示视图的时候 才会初始化视图, 大量的视图初始化, 计算布局会消耗CPU的资源), 显示之前还要做这些工作.
-    // 3. 
+    // 3. CoreGraphics 通过drawRect方法进行渲染寄宿图的话, 就会创建该视图同样大小的内存的视图, 绘制结束后, 将图片数据通过IPC上传到渲染服务器
+    
+    // 图层层级结构越复杂, 需要CPU计算的越多, 消耗CPU资源比较多
+    
+    // 通过定时器 能保证动画不掉帧
+    
+    // 关于软件绘图,
+    // 如果实现了CALayerDelegate中的-drawLayer:(CALayer)layer context,或者视图的-drawLayer方法(对前者方法的包装), 那么每次重绘都会销毁寄宿图大小的内存, 然后重新分配创建该大小的内存
+    
     [super viewDidLoad];
+    
+    
+    
 }
 
 

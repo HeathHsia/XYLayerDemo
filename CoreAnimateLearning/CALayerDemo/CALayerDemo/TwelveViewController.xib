@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TwelveViewController">
             <connections>
+                <outlet property="drawView" destination="SRL-Em-ttv" id="y84-lu-wQ6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,13 +21,58 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="utE-xC-eNN">
-                    <rect key="frame" x="35" y="92" width="344" height="367"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SRL-Em-ttv" customClass="DrawView">
+                    <rect key="frame" x="18" y="20" width="376" height="559"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNr-pj-Fik">
+                    <rect key="frame" x="48" y="669" width="60" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="上一步"/>
+                    <connections>
+                        <action selector="recall:" destination="-1" eventType="touchUpInside" id="TT3-mA-BLm"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cm7-VB-jLU">
+                    <rect key="frame" x="191" y="669" width="31" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="清除"/>
+                    <connections>
+                        <action selector="clear:" destination="-1" eventType="touchUpInside" id="KbP-ZC-Vsd"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k91-Tu-k6P">
+                    <rect key="frame" x="304" y="669" width="46" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="下一步"/>
+                    <connections>
+                        <action selector="nextStep:" destination="-1" eventType="touchUpInside" id="f0E-mJ-8bP"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U48-lu-9Rg">
+                    <rect key="frame" x="70" y="604" width="31" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="画笔"/>
+                    <connections>
+                        <action selector="paint:" destination="-1" eventType="touchUpInside" id="JLZ-VF-Ed9"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9U-5e-HJB">
+                    <rect key="frame" x="185" y="604" width="46" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="橡皮擦"/>
+                    <connections>
+                        <action selector="eraser:" destination="-1" eventType="touchUpInside" id="gfO-Bb-eWD"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="SRL-Em-ttv" secondAttribute="bottom" constant="157" id="DzH-QH-aup"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="SRL-Em-ttv" secondAttribute="trailing" constant="20" id="Uuy-yy-hSc"/>
+                <constraint firstItem="SRL-Em-ttv" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="dwH-Nh-HGH"/>
+                <constraint firstItem="SRL-Em-ttv" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="18" id="jxI-65-Vm6"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
         </view>
     </objects>

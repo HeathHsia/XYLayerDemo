@@ -201,15 +201,15 @@ float bounceEaseOut(float p)
     CFTimeInterval thisDuration = thisStep - self.lastStep;
     self.lastStep = thisStep;
     
-    NSLog(@"thisDuration- %f", thisDuration);
+//    NSLog(@"thisDuration- %f", thisDuration);
     
     // 记录动画已经运行的时间
     self.timeoffset = MIN(self.timeoffset + thisDuration, self.duration);
-    NSLog(@"timeoffset ---%f", self.timeoffset);
+//    NSLog(@"timeoffset ---%f", self.timeoffset);
     
     // 获取标准的时间偏移量 (0 - 1)
     float time = self.timeoffset / self.duration;
-    NSLog(@"time ---------%f", time);
+//    NSLog(@"time ---------%f", time);
     
     // 过渡性动画时间计算
     time = bounceEaseOut(time);

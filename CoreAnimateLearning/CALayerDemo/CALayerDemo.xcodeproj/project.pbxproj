@@ -37,6 +37,7 @@
 		14979EB720009FBA00D90025 /* ElevenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14979EB520009FBA00D90025 /* ElevenViewController.xib */; };
 		14E8006D2000D0BA00053497 /* TwelveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8006B2000D0BA00053497 /* TwelveViewController.m */; };
 		14E8006E2000D0BA00053497 /* TwelveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E8006C2000D0BA00053497 /* TwelveViewController.xib */; };
+		14E80071200309F300053497 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E80070200309F300053497 /* DrawView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,8 @@
 		14E8006A2000D0BA00053497 /* TwelveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwelveViewController.h; sourceTree = "<group>"; };
 		14E8006B2000D0BA00053497 /* TwelveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwelveViewController.m; sourceTree = "<group>"; };
 		14E8006C2000D0BA00053497 /* TwelveViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwelveViewController.xib; sourceTree = "<group>"; };
+		14E8006F200309F300053497 /* DrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
+		14E80070200309F300053497 /* DrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +198,8 @@
 				14E8006A2000D0BA00053497 /* TwelveViewController.h */,
 				14E8006B2000D0BA00053497 /* TwelveViewController.m */,
 				14E8006C2000D0BA00053497 /* TwelveViewController.xib */,
+				14E8006F200309F300053497 /* DrawView.h */,
+				14E80070200309F300053497 /* DrawView.m */,
 				14979E911FFDF4A700D90025 /* CustomView.h */,
 				14979E921FFDF4A700D90025 /* CustomView.m */,
 				14979E561FF4C5F200D90025 /* Assets.xcassets */,
@@ -387,6 +392,7 @@
 				14979E9C1FFE1C5100D90025 /* SevenViewController.m in Sources */,
 				14979E931FFDF4A700D90025 /* CustomView.m in Sources */,
 				14979E4F1FF4C5F200D90025 /* AppDelegate.m in Sources */,
+				14E80071200309F300053497 /* DrawView.m in Sources */,
 				14979E901FFDCA1B00D90025 /* FiveViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
