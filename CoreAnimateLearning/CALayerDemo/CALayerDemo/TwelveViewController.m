@@ -12,27 +12,21 @@
 @interface TwelveViewController ()
 @property (strong, nonatomic) IBOutlet DrawView *drawView;
 
-
 @end
 
 @implementation TwelveViewController
 
-#pragma mark --- 画笔
-- (IBAction)paint:(id)sender {
-    self.drawView.drawStatus = DrawPaint;
+#pragma mark --- 橡皮
+- (IBAction)eraser:(id)sender {
 }
 
-#pragma mark --- 橡皮擦
-
-- (IBAction)eraser:(id)sender {
-    self.drawView.drawStatus = DrawEraser;
+#pragma mark --- 画笔
+- (IBAction)paint:(id)sender {
 }
 
 #pragma mark --- 清除
 - (IBAction)clear:(id)sender {
-    
     [self.drawView clear];
-
 }
 
 #pragma mark --- 上一步

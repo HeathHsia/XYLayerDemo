@@ -21,9 +21,6 @@
 
 @property (nonatomic, assign) CGPoint endPoint;
 
-@property (nonatomic, strong) CAShapeLayer *eraserLayer;
-@property (nonatomic, strong) UIBezierPath *eraserPath;
-
 @end
 
 
@@ -39,7 +36,6 @@
 {
     [super awakeFromNib];
     self.bezierPath = [UIBezierPath bezierPath];
-    self.eraserPath = [UIBezierPath bezierPath];
     self.layer.masksToBounds = YES;
     CAShapeLayer *shapeLayer = (CAShapeLayer *)self.layer;
     shapeLayer.fillColor = [UIColor clearColor].CGColor;
@@ -47,8 +43,6 @@
     shapeLayer.strokeColor = [UIColor redColor].CGColor;
     self.pathArr = [NSMutableArray array];
     self.delPathArr = [NSMutableArray array];
-    self.drawStatus = DrawPaint;
-    [shapeLayer addSublayer:self.eraserLayer];
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -56,15 +50,12 @@
     if (self = [super initWithFrame:frame]) {
         self.layer.masksToBounds = YES;
         self.bezierPath = [UIBezierPath bezierPath];
-        self.eraserPath = [UIBezierPath bezierPath];
         CAShapeLayer *shapeLayer = (CAShapeLayer *)self.layer;
         shapeLayer.fillColor = [UIColor clearColor].CGColor;
         shapeLayer.lineWidth = 5.0;
         shapeLayer.strokeColor = [UIColor redColor].CGColor;
         self.pathArr = [NSMutableArray array];
         self.delPathArr = [NSMutableArray array];
-        self.drawStatus = DrawPaint;
-        [shapeLayer addSublayer:self.eraserLayer];
     }
     return self;
 }
@@ -73,40 +64,28 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     CGPoint point = [[touches anyObject] locationInView:self];
-    if (self.drawStatus == DrawPaint) {
-        self.stepBezierPath  = [UIBezierPath new];
-        self.tmpBezierPath = [UIBezierPath bezierPathWithCGPath:self.bezierPath.CGPath];
-        [self.stepBezierPath moveToPoint:point];
-        [self.tmpBezierPath moveToPoint:point];
-        self.endPoint = point;
-    }else if (self.drawStatus == DrawEraser) {
-        [self.eraserPath moveToPoint:point];
-    }
+    self.stepBezierPath  = [UIBezierPath new];
+    self.tmpBezierPath = [UIBezierPath bezierPathWithCGPath:self.bezierPath.CGPath];
+    [self.stepBezierPath moveToPoint:point];
+    [self.tmpBezierPath moveToPoint:point];
+    self.endPoint = point;
+    
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     CGPoint point = [[touches anyObject] locationInView:self];
-    if (self.drawStatus == DrawPaint) {
-        [self.stepBezierPath addLineToPoint:point];
-        [self.tmpBezierPath addLineToPoint:point];
-        [self updateLayerWithPath:self.tmpBezierPath.CGPath];
-    }else if (self.drawStatus == DrawEraser) {
-        [self.eraserPath addLineToPoint:point];
-        [self updateEraserLayerWithPath:self.eraserPath.CGPath];
-    }
+    [self.stepBezierPath addLineToPoint:point];
+    [self.tmpBezierPath addLineToPoint:point];
+    [self updateLayerWithPath:self.tmpBezierPath.CGPath];
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    if (self.drawStatus == DrawPaint) {
-        self.endPoint = [[touches anyObject] locationInView:self];
-        [self.pathArr addObject:self.stepBezierPath];
-        [self.bezierPath appendPath:self.stepBezierPath];
-        [self updateLayerWithPath:self.bezierPath.CGPath];
-    }else if (self.drawStatus == DrawEraser) {
-        
-    }
+    self.endPoint = [[touches anyObject] locationInView:self];
+    [self.pathArr addObject:self.stepBezierPath];
+    [self.bezierPath appendPath:self.stepBezierPath];
+    [self updateLayerWithPath:self.bezierPath.CGPath];
 }
 
 #pragma mark ---- 清除操作
@@ -149,21 +128,8 @@
     shapeLayer.path = path;
 }
 
-- (void)updateEraserLayerWithPath:(CGPathRef)path
-{
-    self.eraserLayer.path = path;
-}
 
-#pragma mark --- LazyLoad
-- (CAShapeLayer *)eraserLayer
-{
-    if (!_eraserLayer) {
-        _eraserLayer = [CAShapeLayer layer];
-        _eraserLayer.fillColor = [UIColor clearColor].CGColor;
-        _eraserLayer.lineWidth = 5.0;
-        _eraserLayer.strokeColor = self.layer.backgroundColor;
-    }
-    return _eraserLayer;
-}
+
+
 
 @end

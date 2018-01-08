@@ -24,9 +24,7 @@
 
 #pragma mark --- 添加一个图层
 - (void)addCustomLayer
-{
-    
-    
+{    
     UIView   *blueLayer = [[UIView alloc] init];
     blueLayer.backgroundColor = [UIColor orangeColor];
     blueLayer.frame = CGRectMake(50, 50, 50, 50);

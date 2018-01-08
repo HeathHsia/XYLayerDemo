@@ -8,14 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-typedef enum : NSUInteger {
-    DrawPaint, // 画笔模式
-    DrawEraser, // 橡皮擦模式
-} DrawStatus;
+
 
 @interface DrawView : UIView
 
-@property (nonatomic, assign) DrawStatus drawStatus; // 绘画模式
 
 /**
    清除画板
