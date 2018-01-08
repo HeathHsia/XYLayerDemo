@@ -74,8 +74,6 @@ float interpolate (float from, float to, float time)
         [frames addObject:[self interpolateFromValue:fromValue toValue:toValue time:time]];
     }
     
-    
-    
     CAKeyframeAnimation *ballAnimation = [CAKeyframeAnimation animation];
     ballAnimation.keyPath = @"position";
     ballAnimation.values = frames;
@@ -93,6 +91,7 @@ float interpolate (float from, float to, float time)
 //    ballAnimation.keyTimes = @[@(0.0), @(0.3), @(0.7), @(1.0)];
 //    ballAnimation.removedOnCompletion = NO;
 //    ballAnimation.fillMode = kCAFillModeForwards;
+    
     [self.ballImage.layer addAnimation:ballAnimation forKey:@"kBallAnimation"];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{

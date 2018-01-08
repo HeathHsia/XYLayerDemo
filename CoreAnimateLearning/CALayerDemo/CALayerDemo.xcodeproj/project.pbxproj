@@ -35,6 +35,8 @@
 		14979EB22000626100D90025 /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 14979EB12000626000D90025 /* ball.png */; };
 		14979EB620009FBA00D90025 /* ElevenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14979EB420009FBA00D90025 /* ElevenViewController.m */; };
 		14979EB720009FBA00D90025 /* ElevenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14979EB520009FBA00D90025 /* ElevenViewController.xib */; };
+		14E8006D2000D0BA00053497 /* TwelveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8006B2000D0BA00053497 /* TwelveViewController.m */; };
+		14E8006E2000D0BA00053497 /* TwelveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E8006C2000D0BA00053497 /* TwelveViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,9 @@
 		14979EB320009FBA00D90025 /* ElevenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ElevenViewController.h; sourceTree = "<group>"; };
 		14979EB420009FBA00D90025 /* ElevenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ElevenViewController.m; sourceTree = "<group>"; };
 		14979EB520009FBA00D90025 /* ElevenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ElevenViewController.xib; sourceTree = "<group>"; };
+		14E8006A2000D0BA00053497 /* TwelveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwelveViewController.h; sourceTree = "<group>"; };
+		14E8006B2000D0BA00053497 /* TwelveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwelveViewController.m; sourceTree = "<group>"; };
+		14E8006C2000D0BA00053497 /* TwelveViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwelveViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +192,9 @@
 				14979EB320009FBA00D90025 /* ElevenViewController.h */,
 				14979EB420009FBA00D90025 /* ElevenViewController.m */,
 				14979EB520009FBA00D90025 /* ElevenViewController.xib */,
+				14E8006A2000D0BA00053497 /* TwelveViewController.h */,
+				14E8006B2000D0BA00053497 /* TwelveViewController.m */,
+				14E8006C2000D0BA00053497 /* TwelveViewController.xib */,
 				14979E911FFDF4A700D90025 /* CustomView.h */,
 				14979E921FFDF4A700D90025 /* CustomView.m */,
 				14979E561FF4C5F200D90025 /* Assets.xcassets */,
@@ -290,7 +298,7 @@
 				TargetAttributes = {
 					14979E491FF4C5F200D90025 = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					14979E611FF4C5F200D90025 = {
 						CreatedOnToolsVersion = 9.1;
@@ -336,6 +344,7 @@
 				14979EB720009FBA00D90025 /* ElevenViewController.xib in Resources */,
 				14979E551FF4C5F200D90025 /* Main.storyboard in Resources */,
 				14979E9E1FFF13E200D90025 /* air.png in Resources */,
+				14E8006E2000D0BA00053497 /* TwelveViewController.xib in Resources */,
 				14979EB22000626100D90025 /* ball.png in Resources */,
 				14979E991FFE049900D90025 /* SixViewController.xib in Resources */,
 				14979E881FFCA7D500D90025 /* ThirdViewController.xib in Resources */,
@@ -364,6 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14E8006D2000D0BA00053497 /* TwelveViewController.m in Sources */,
 				14979E831FFC6D7200D90025 /* SecondViewController.m in Sources */,
 				14979E981FFE049900D90025 /* SixViewController.m in Sources */,
 				14979E871FFCA7D500D90025 /* ThirdViewController.m in Sources */,
@@ -540,11 +550,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = CGP997J892;
 				INFOPLIST_FILE = CALayerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.firehsia.CALayerDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pku.kpn.daxueshengdaikuankpn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1344d533-5205-447c-858f-fa8c6728a9e1";
+				PROVISIONING_PROFILE_SPECIFIER = daxueshengdaikuan_profile_dev;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -553,11 +566,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = CGP997J892;
 				INFOPLIST_FILE = CALayerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.firehsia.CALayerDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pku.kpn.daxueshengdaikuankpn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a53059e6-f7ac-40cf-8227-d0ac545e4506";
+				PROVISIONING_PROFILE_SPECIFIER = daxueshengdaikuan_profile_dis;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
