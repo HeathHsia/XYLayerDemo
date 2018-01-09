@@ -71,19 +71,19 @@
     [self animate];
 }
 
-float interpolateBall(float from, float to, float time)
+float ainterpolateBall(float from, float to, float time)
 {
     return (to - from) * time + from;
 }
 
-- (id)interpolateFromValue:(id)fromValue toValue:(id)toValue time:(float)time
+- (id)ainterpolateFromValue:(id)fromValue toValue:(id)toValue time:(float)time
 {
     if ([fromValue isKindOfClass:[NSValue class]]) {
         const char *type = [(NSValue *)fromValue objCType];
         if (strcmp(type, @encode(CGPoint)) == 0) {
             CGPoint from = [fromValue CGPointValue];
             CGPoint to = [toValue CGPointValue];
-            CGPoint result = CGPointMake(interpolateBall(from.x, to.x, time), interpolateBall(from.y, to.y, time));
+            CGPoint result = CGPointMake(ainterpolateBall(from.x, to.x, time), ainterpolateBall(from.y, to.y, time));
             return [NSValue valueWithCGPoint:result];
         }
     }
@@ -91,12 +91,12 @@ float interpolateBall(float from, float to, float time)
     return (time < 0.5) ? fromValue : toValue;
 }
 
-float quadraticEaseInOut(float t)
+float aquadraticEaseInOut(float t)
 {
     return (t < 0.5)? (2 * t * t): (-2 * t * t) + (4 * t) - 1; }
 
 
-float bounceEaseInOut(float p)
+float abounceEaseInOut(float p)
 {
     if(p < 4/11.0)
     {
@@ -117,7 +117,7 @@ float bounceEaseInOut(float p)
 }
 
 // 计算返回弹性时间
-float bounceEaseOut(float p)
+float abounceEaseOut(float p)
 {
     
 //    if (t < 4/11.0) {
@@ -131,11 +131,11 @@ float bounceEaseOut(float p)
     
     if(p < 0.5)
     {
-        return 0.5 * bounceEaseInOut(p*2);
+        return 0.5 * abounceEaseInOut(p*2);
     }
     else
     {
-        return 0.5 * bounceEaseInOut(p * 2 - 1) + 0.5;
+        return 0.5 * abounceEaseInOut(p * 2 - 1) + 0.5;
     }
 }
 
@@ -212,10 +212,10 @@ float bounceEaseOut(float p)
 //    NSLog(@"time ---------%f", time);
     
     // 过渡性动画时间计算
-    time = bounceEaseOut(time);
+    time = abounceEaseOut(time);
     
     // 更新球的位置
-    id position = [self interpolateFromValue:self.fromValue toValue:self.toValue time:time];
+    id position = [self ainterpolateFromValue:self.fromValue toValue:self.toValue time:time];
     self.ballImage.center = [position CGPointValue];
     
     // 运行时间等于动画时长 停止动画 关闭定时器

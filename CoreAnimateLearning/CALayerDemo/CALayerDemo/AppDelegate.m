@@ -19,6 +19,7 @@
 #import "TenViewController.h"
 #import "ElevenViewController.h"
 #import "TwelveViewController.h"
+#import "ThirtyViewController.h"
 
 @interface AppDelegate ()<UITabBarControllerDelegate>
 
@@ -29,7 +30,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    TwelveViewController *twelveVC = [[TwelveViewController alloc] initWithNibName:@"TwelveViewController" bundle:nil];
+//    ThirtyViewController *thirtyVC = [[ThirtyViewController alloc] init];
+//    self.window.rootViewController = thirtyVC;
+    
+    TenViewController *twelveVC = [[TenViewController alloc] initWithNibName:@"TenViewController" bundle:nil];
     self.window.rootViewController = twelveVC;
     
     return YES;

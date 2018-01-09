@@ -8,9 +8,10 @@
 
 #import "TwelveViewController.h"
 #import "DrawView.h"
+#import "DrawViewByCG.h"
 
 @interface TwelveViewController ()
-@property (strong, nonatomic) IBOutlet DrawView *drawView;
+@property (strong, nonatomic) IBOutlet DrawViewByCG *drawView;
 
 @end
 
@@ -28,17 +29,14 @@
 
 #pragma mark --- 清除
 - (IBAction)clear:(id)sender {
-    [self.drawView clear];
 }
 
 #pragma mark --- 上一步
 - (IBAction)recall:(id)sender {
-    [self.drawView recall];
 }
 
 #pragma mark --- 下一步
 - (IBAction)nextStep:(id)sender {
-    [self.drawView nextStep];
 }
 - (void)viewDidLoad {
     

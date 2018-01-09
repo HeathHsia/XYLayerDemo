@@ -74,6 +74,7 @@
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
+    // 存储的point点坐标属性
     CGPoint point = [[touches anyObject] locationInView:self];
     [self.stepBezierPath addLineToPoint:point];
     [self.tmpBezierPath addLineToPoint:point];
@@ -124,12 +125,11 @@
 #pragma mark --- 更新layer.path
 - (void)updateLayerWithPath:(CGPathRef)path
 {
+    // 更新LayerBezier曲线
     CAShapeLayer *shapeLayer = (CAShapeLayer *)self.layer;
     shapeLayer.path = path;
     // layer的一个属性
     shapeLayer.drawsAsynchronously = YES;
-    
-
 }
 
 

@@ -38,6 +38,11 @@
 		14E8006D2000D0BA00053497 /* TwelveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8006B2000D0BA00053497 /* TwelveViewController.m */; };
 		14E8006E2000D0BA00053497 /* TwelveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E8006C2000D0BA00053497 /* TwelveViewController.xib */; };
 		14E80071200309F300053497 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E80070200309F300053497 /* DrawView.m */; };
+		14E80073200491CC00053497 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E80072200491C100053497 /* WebKit.framework */; };
+		14E800762004953A00053497 /* DrawViewByCG.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E800752004953A00053497 /* DrawViewByCG.m */; };
+		14E8007A20049FD900053497 /* ThirtyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8007820049FD900053497 /* ThirtyViewController.m */; };
+		14E8007B20049FD900053497 /* ThirtyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E8007920049FD900053497 /* ThirtyViewController.xib */; };
+		14E800822004BAC400053497 /* UIImageView+Radius.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E800812004BAC400053497 /* UIImageView+Radius.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +115,14 @@
 		14E8006C2000D0BA00053497 /* TwelveViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwelveViewController.xib; sourceTree = "<group>"; };
 		14E8006F200309F300053497 /* DrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
 		14E80070200309F300053497 /* DrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
+		14E80072200491C100053497 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		14E800742004953A00053497 /* DrawViewByCG.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawViewByCG.h; sourceTree = "<group>"; };
+		14E800752004953A00053497 /* DrawViewByCG.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawViewByCG.m; sourceTree = "<group>"; };
+		14E8007720049FD900053497 /* ThirtyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirtyViewController.h; sourceTree = "<group>"; };
+		14E8007820049FD900053497 /* ThirtyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirtyViewController.m; sourceTree = "<group>"; };
+		14E8007920049FD900053497 /* ThirtyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirtyViewController.xib; sourceTree = "<group>"; };
+		14E800802004BAC400053497 /* UIImageView+Radius.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Radius.h"; sourceTree = "<group>"; };
+		14E800812004BAC400053497 /* UIImageView+Radius.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Radius.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14E80073200491CC00053497 /* WebKit.framework in Frameworks */,
 				14979E941FFE03C400D90025 /* GLKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,10 +212,17 @@
 				14E8006A2000D0BA00053497 /* TwelveViewController.h */,
 				14E8006B2000D0BA00053497 /* TwelveViewController.m */,
 				14E8006C2000D0BA00053497 /* TwelveViewController.xib */,
+				14E8007720049FD900053497 /* ThirtyViewController.h */,
+				14E8007820049FD900053497 /* ThirtyViewController.m */,
+				14E8007920049FD900053497 /* ThirtyViewController.xib */,
 				14E8006F200309F300053497 /* DrawView.h */,
 				14E80070200309F300053497 /* DrawView.m */,
+				14E800742004953A00053497 /* DrawViewByCG.h */,
+				14E800752004953A00053497 /* DrawViewByCG.m */,
 				14979E911FFDF4A700D90025 /* CustomView.h */,
 				14979E921FFDF4A700D90025 /* CustomView.m */,
+				14E800802004BAC400053497 /* UIImageView+Radius.h */,
+				14E800812004BAC400053497 /* UIImageView+Radius.m */,
 				14979E561FF4C5F200D90025 /* Assets.xcassets */,
 				14979E581FF4C5F200D90025 /* LaunchScreen.storyboard */,
 				14979E5B1FF4C5F200D90025 /* Info.plist */,
@@ -231,6 +252,7 @@
 		14979E891FFCB6AB00D90025 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				14E80072200491C100053497 /* WebKit.framework */,
 				14979E8A1FFCB6AB00D90025 /* GLKit.framework */,
 			);
 			name = Frameworks;
@@ -342,6 +364,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14E8007B20049FD900053497 /* ThirtyViewController.xib in Resources */,
 				14979EAB1FFF8DA900D90025 /* NineViewController.xib in Resources */,
 				14979EB01FFFA1E200D90025 /* TenViewController.xib in Resources */,
 				14979E5A1FF4C5F200D90025 /* LaunchScreen.storyboard in Resources */,
@@ -378,10 +401,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14E800762004953A00053497 /* DrawViewByCG.m in Sources */,
 				14E8006D2000D0BA00053497 /* TwelveViewController.m in Sources */,
 				14979E831FFC6D7200D90025 /* SecondViewController.m in Sources */,
 				14979E981FFE049900D90025 /* SixViewController.m in Sources */,
 				14979E871FFCA7D500D90025 /* ThirdViewController.m in Sources */,
+				14E800822004BAC400053497 /* UIImageView+Radius.m in Sources */,
 				14979EB620009FBA00D90025 /* ElevenViewController.m in Sources */,
 				14979E8D1FFCBF5300D90025 /* ForthViewController.m in Sources */,
 				14979EAA1FFF8DA900D90025 /* NineViewController.m in Sources */,
@@ -393,6 +418,7 @@
 				14979E931FFDF4A700D90025 /* CustomView.m in Sources */,
 				14979E4F1FF4C5F200D90025 /* AppDelegate.m in Sources */,
 				14E80071200309F300053497 /* DrawView.m in Sources */,
+				14E8007A20049FD900053497 /* ThirtyViewController.m in Sources */,
 				14979E901FFDCA1B00D90025 /* FiveViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
