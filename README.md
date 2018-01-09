@@ -1,6 +1,6 @@
 # CoreAnimation Advanced Techniques Learning
 
-### 属性/关键帧动画 定时器动画
+### 属性/关键帧动画 定时器动画 缓冲函数
 
 ![animate](resource/animate.gif)
 

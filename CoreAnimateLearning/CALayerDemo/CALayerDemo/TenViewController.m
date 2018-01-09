@@ -286,7 +286,6 @@ float bounceEaseOut(float p)
             return YES;
         }
     }
-    
     return NO;
 }
 
@@ -318,10 +317,10 @@ float bounceEaseOut(float p)
     if (self.timeoffset >= self.duration) {
         //        [self.displayLink invalidate];
         //        self.displayLink = nil;
-//        [self.ballImage removeFromSuperview];
+        [self.ballImage removeFromSuperview];
         self.timeoffset = 0.0;
-//        [self.timer invalidate];
-//        self.timer = nil;
+        [self.timer invalidate];
+        self.timer = nil;
     }
 }
 
