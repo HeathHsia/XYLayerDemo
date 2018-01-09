@@ -16,7 +16,9 @@
         self.layer.delegate = self;
     }
     return self;
+    
 }
+
 
 
 - (id<CAAction>)actionForLayer:(CALayer *)layer forKey:(NSString *)event

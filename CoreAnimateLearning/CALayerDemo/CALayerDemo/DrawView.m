@@ -126,8 +126,11 @@
 {
     CAShapeLayer *shapeLayer = (CAShapeLayer *)self.layer;
     shapeLayer.path = path;
-}
+    // layer的一个属性
+    shapeLayer.drawsAsynchronously = YES;
+    
 
+}
 
 
 

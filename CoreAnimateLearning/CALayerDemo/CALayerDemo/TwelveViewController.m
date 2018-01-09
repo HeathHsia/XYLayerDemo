@@ -18,10 +18,12 @@
 
 #pragma mark --- 橡皮
 - (IBAction)eraser:(id)sender {
+    
 }
 
 #pragma mark --- 画笔
 - (IBAction)paint:(id)sender {
+    
 }
 
 #pragma mark --- 清除
